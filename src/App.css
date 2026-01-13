@@ -1,0 +1,105 @@
+/* Import Google Fonts hỗ trợ tiếng Việt */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap");
+
+:root {
+  --primary-color: #fa541c; /* Cam cháy - Volcano */
+  --bg-color: #fffbf0; /* Màu kem nhạt */
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--bg-color);
+  margin: 0;
+}
+
+/* Typography Customization */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif !important;
+}
+
+/* Hero Section Background */
+.hero-section {
+  background: linear-gradient(135deg, #ff9c6e 0%, #fa541c 100%);
+  padding: 60px 20px 80px;
+  text-align: center;
+  color: white;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 10px 30px rgba(250, 84, 28, 0.2);
+  margin-bottom: -40px; /* Để phần Input đè lên trên */
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  color: #fff !important;
+  font-size: 3rem !important;
+  margin-bottom: 10px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.1rem;
+}
+
+/* Card Styling */
+.search-card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+  border: none !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Card Styling: Cập nhật phần này */
+.recipe-card {
+  transition: all 0.3s ease;
+  border: 1px solid #f0e6d2 !important;
+  background: #fff !important;
+
+  /* Thêm các thuộc tính sau để card bằng nhau */
+  height: 100%; /* Chiều cao bung full cột */
+  display: flex !important; /* Sử dụng flexbox cho nội dung trong card */
+  flex-direction: column; /* Xếp dọc nội dung */
+}
+
+/* Tùy chỉnh phần body của Card để đẩy nút xuống đáy */
+.recipe-card .ant-card-body {
+  flex: 1; /* Chiếm hết khoảng trống còn thừa */
+  display: flex; /* Flexbox cho nội dung bên trong body */
+  flex-direction: column; /* Xếp dọc */
+}
+
+/* Đẩy nút "Xem công thức" xuống dưới cùng */
+.recipe-card .ant-btn-link {
+  margin-top: auto !important; /* Tự động đẩy margin lên trên để nút rớt xuống đáy */
+  padding-left: 0;
+  font-weight: 700;
+  text-align: left; /* Canh trái cho nút */
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Custom Scrollbar for Modal */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffbb96;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.ant-btn-link.ant-btn-color-link.ant-btn-variant-link {
+  color: var(--primary-color) !important;
+}
